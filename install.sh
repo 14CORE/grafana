@@ -175,7 +175,7 @@ docker run -d\
  hopsoft/graphite-statsd >>/dev/null 2>>install.log
 echo -e "\r\033[K\e[36mCreating Graphite docker container ----- Complete\e[0m"
 
-# Enable InfluxDB WebUI (07/19/17 - THIS HAS BEEN DISABLED AS THIS IS NO LONGER AN OPTION IN THE CONFIG FILE)
+# Enable InfluxDB WebUI (This has been completely removed as of V1.3. Chronograf has replaced it)
 # echo -ne "\e[36mEnabling InfluxDB WebUI\e[0m"
 # sed -i '40s/.*/  enabled = true/' /docker/containers/influxdb/conf/influxdb.conf >>/dev/null 2>>install.log
 # echo -e "\r\033[K\e[36mEnabling InfluxDB WebUI ----- Complete\e[0m"
@@ -195,8 +195,7 @@ echo -e "\r\033[K\e[36mRemoving "Sudo" requirement from docker command ----- Com
 # Restart Announcment for previous command
 echo -e "\e[7mThe VM needs to be restarted in order to apply changes and finalize the installation.\e[0m"
 
-echo -e "\e[7mAfter the restart, Grafana can be accessed via http://${MYIP}:3000 with the user "Root" and the password you created earlier in the installation.\e[0m"
-echo -e "\e[7mThe InfluxDB AdminUI can be accessed via http://${MYIP}:8083. It does not require a username or password by default.\e[0m"
+echo -e "\e[7mAfter the restart, Grafana can be accessed via http://${MYIP}:3000 with the user "admin" and the password you created earlier in the installation.\e[0m"
 
 echo -n "Press any key to restart"
 read -rsn1
