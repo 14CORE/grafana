@@ -73,7 +73,7 @@ fi >/dev/null 2>esxi_setup.log
 echo -e "\e[36mCreating Configuration File \e[0m"
 
 
-cat >$DIR"esxi.cfg"<<EOF
+cat >$DIR/"esxi.cfg"<<EOF
 #####################################
 #                                   #
 # Configuration File for ESXi.sh    #
@@ -111,7 +111,7 @@ wget -O $DIR"esxi.sh" https://raw.githubusercontent.com/tylerhammer/grafana/mast
 
 # Update ESXi.sh with config file.
 echo -e "\e[36mConnecting Configuration file and ESXi script. \e[0m"
-sed -i "10i . "$DIR"esxi.cfg" $DIR"esxi.sh" >/dev/null 2>>esxi_setup.log
+sed -i "10i . "$DIR/"esxi.cfg" $DIR/"esxi.sh" >/dev/null 2>>esxi_setup.log
 
 # Set Chmod
 echo -e "\e[36mUpdating permissions. \e[0m"
@@ -126,8 +126,8 @@ echo -e "\e[36mCreating SystemD file.\e[0m"
 sudo bash -c "cat >/lib/systemd/system/esximon.service" << EOF
 [Unit]
 Description=ESXi Stats
-Requires=influxdb.service
-After=influxdb.service
+Requires=docker.service
+After=docker.service
 
 [Service]
 Type=simple
