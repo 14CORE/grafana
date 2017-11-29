@@ -1,4 +1,4 @@
-# [STEP BY STEP GUIDE - CLICK ME](http://cyanlab.io/grafana-the-absolute-beginners-guide/)
+# [STEP BY STEP GUIDE - CLICK ME](https://cyanlab.io/the-absolute-beginners-guide-to-grafana/)
 
 # Cyan Server Grafana Setup!
 
