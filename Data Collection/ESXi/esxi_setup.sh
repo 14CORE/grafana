@@ -126,8 +126,6 @@ echo -e "\e[36mCreating SystemD file.\e[0m"
 sudo bash -c "cat >/lib/systemd/system/esximon.service" << EOF
 [Unit]
 Description=ESXi Stats
-Requires=docker.service
-After=docker.service
 
 [Service]
 Type=simple
