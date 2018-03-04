@@ -1,7 +1,5 @@
 [Unit]
 Description=ESXi Stats
-Requires=influxdb.service
-After=influxdb.service
 
 [Service]
 Type=simple
